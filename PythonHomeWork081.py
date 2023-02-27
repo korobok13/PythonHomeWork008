@@ -6,10 +6,16 @@
 import csv
 
 
-with open("Contact.csv", newline = '') as csvfile:
+with open("contact.csv", newline = '', encoding = 'utf-8') as csvfile:
     reader = csv.DictReader(csvfile, delimiter = ',')
     for row in reader:
-        print(row['фамилия'], '|' row['имя'])
+        print(row['иванов'])
+
+# with open("contact.csv", 'w', newline = '', encoding = 'utf-8') as csvfile:
+#     writer = csv.writer(csvfile, delimiter = ',')
+#     writer.writerow(["иванов", "row 1 el 2", "row 1 el 3"])
+#     writer.writerow(["row 2 el 1", "row 2 el 2", "row 2 el 3"])
+#     writer.writerow(["row 3 el 1", "row 3 el 2", "row 3 el 3"])
 
 # Ввод данных
 # def ask_user():
